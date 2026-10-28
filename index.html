@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA — El mundo, sin límites</title>
+<meta name="description" content="NEXORA: noticias del mundo, vídeos, ciencia, NASA y tecnología.">
+<style>
+:root {
+  --fondo:#080b16;
+  --panel:#11182b;
+  --borde:#26334e;
+  --texto:#f4f7ff;
+  --suave:#9ba9c5;
+  --azul:#6585ff;
+  --turquesa:#40ead1;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:radial-gradient(ellipse at 50% 0%,#19244b 0%,var(--fondo) 48%);
+  color:var(--texto);
+}
+header {
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:#080b16eF;
+  border-bottom:1px solid var(--borde);
+  backdrop-filter:blur(14px);
+}
+.barra {
+  max-width:1150px;
+  margin:auto;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.logo {
+  font-size:27px;
+  font-weight:900;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,var(--turquesa),#8b8bff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+nav {display:flex;gap:20px;flex-wrap:wrap}
+nav a {color:var(--suave);text-decoration:none;font-size:14px}
+nav a:hover {color:var(--turquesa)}
+main {max-width:1150px;margin:auto;padding:35px 22px 60px}
+.hero {
+  padding:65px 25px;
+  border:1px solid var(--borde);
+  border-radius:26px;
+  background:linear-gradient(125deg,#172548,#101329 60%,#18203d);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.etiqueta {
+  display:inline-block;
+  padding:8px 13px;
+  border:1px solid #3b5275;
+  border-radius:30px;
+  color:var(--turquesa);
+  font-size:12px;
+  letter-spacing:1px;
+}
+h1 {font-size:clamp(36px,7vw,65px);margin:20px 0 12px}
+.degradado {
+  background:linear-gradient(90deg,var(--turquesa),#9b9aff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero p {max-width:600px;margin:0 auto;color:var(--suave);line-height:1.7}
+.buscador {
+  display:flex;
+  gap:10px;
+  max-width:580px;
+  margin:28px auto 0;
+}
+.buscador input {
+  flex:1;min-width:0;padding:15px;
+  border:1px solid var(--borde);border-radius:12px;
+  background:#090f20;color:white;font-size:15px;
+}
+button {
+  border:0;border-radius:12px;padding:0 20px;
+  background:linear-gradient(100deg,#647cff,#8871ff);
+  color:white;font-weight:bold;cursor:pointer;
+}
+.seccion {margin-top:48px}
+.cabecera {
+  display:flex;justify-content:space-between;align-items:end;
+  gap:15px;margin-bottom:18px;flex-wrap:wrap;
+}
+h2 {font-size:25px;margin:0 0 7px}
+.cabecera p {margin:0;color:var(--suave);font-size:14px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:17px;
+}
+.tarjeta {
+  display:block;text-decoration:none;color:var(--texto);
+  background:linear-gradient(145deg,#141d33,#0e1425);
+  border:1px solid var(--borde);
+  border-radius:18px;padding:23px;
+  min-height:175px;
+  transition:transform .2s,border-color .2s,background .2s;
+}
+.tarjeta:hover {
+  transform:translateY(-5px);
+  border-color:#647cff;
+  background:linear-gradient(145deg,#1b2948,#11172b);
+}
+.icono {
+  display:flex;align-items:center;justify-content:center;
+  width:48px;height:48px;border-radius:14px;
+  background:#27375b;font-size:25px;margin-bottom:17px;
+}
+.tarjeta h3 {margin:0 0 9px;font-size:18px}
+.tarjeta p {margin:0;color:var(--suave);font-size:14px;line-height:1.6}
+.pie {
+  border-top:1px solid var(--borde);
+  padding:25px;text-align:center;color:var(--suave);font-size:13px;
+}
+@media(max-width:520px) {
+  .barra {justify-content:center}
+  .buscador {flex-direction:column}
+  .buscador button {padding:14px}
+  .hero {padding:45px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="barra">
+    <div class="logo">✦ NEXORA</div>
+    <nav>
+      <a href="#actualidad">Actualidad</a>
+      <a href="#ciencia">Ciencia</a>
+      <a href="#ocio">Ocio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="etiqueta">TU VENTANA AL MUNDO</span>
+    <h1>El mundo, <span class="degradado">sin límites.</span></h1>
+    <p>Explora la actualidad, descubre los avances científicos y encuentra contenido interesante en un solo lugar.</p>
+    <form class="buscador" action="https://www.google.com/search" method="get">
+      <input name="q" type="search" placeholder="¿Qué quieres descubrir?" aria-label="Buscar en Google" required>
+      <button type="submit">Buscar ↗</button>
+    </form>
+  </section>
+
+  <section class="seccion" id="actualidad">
+    <div class="cabecera">
+      <div><h2>Actualidad mundial</h2><p>Entérate de lo que ocurre en el mundo.</p></div>
+    </div>
+    <div class="grid">
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=noticias+internacionales+hoy" target="_blank" rel="noopener">
+        <div class="icono">🌍</div><h3>El mundo</h3><p>Noticias internacionales y acontecimientos importantes.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=Donald+Trump+ultimas+noticias" target="_blank" rel="noopener">
+        <div class="icono">🇺🇸</div><h3>Trump y EE. UU.</h3><p>Declaraciones, decisiones y actualidad política.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=elecciones+internacionales+noticias" target="_blank" rel="noopener">
+        <div class="icono">🗳️</div><h3>Elecciones</h3><p>Votaciones, candidatos y resultados electorales.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=guerras+y+conflictos+internacionales+noticias" target="_blank" rel="noopener">
+        <div class="icono">🕊️</div><h3>Conflictos mundiales</h3><p>Información sobre guerras y esfuerzos por la paz.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="seccion" id="ciencia">
+    <div class="cabecera">
+      <div><h2>Ciencia y tecnología</h2><p>Descubre lo que está cambiando nuestro futuro.</p></div>
+    </div>
+    <div class="grid">
+      <a class="tarjeta" href="https://www.youtube.com/@NASA" target="_blank" rel="noopener">
+        <div class="icono">🚀</div><h3>NASA y el espacio</h3><p>Misiones espaciales, planetas y descubrimientos.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=cambio+climatico+documental" target="_blank" rel="noopener">
+        <div class="icono">🌱</div><h3>Medioambiente</h3><p>Cambio climático, contaminación y soluciones.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=inteligencia+artificial+explicada" target="_blank" rel="noopener">
+        <div class="icono">🤖</div><h3>Inteligencia artificial</h3><p>Nuevas tecnologías y cómo afectan a la sociedad.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/results?search_query=descubrimientos+cientificos+recientes" target="_blank" rel="noopener">
+        <div class="icono">🔬</div><h3>Descubrimientos</h3><p>Experimentos, ciencia y nuevas investigaciones.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="seccion" id="ocio">
+    <div class="cabecera">
+      <div><h2>Ocio y aprendizaje</h2><p>Desconecta o aprende algo nuevo.</p></div>
+    </div>
+    <div class="grid">
+      <a class="tarjeta" href="https://poki.com/" target="_blank" rel="noopener">
+        <div class="icono">🎮</div><h3>Juegos</h3><p>Descubre juegos gratuitos en Poki.</p>
+      </a>
+      <a class="tarjeta" href="https://www.chess.com/" target="_blank" rel="noopener">
+        <div class="icono">♟️</div><h3>Ajedrez</h3><p>Juega partidas y mejora tu estrategia.</p>
+      </a>
+      <a class="tarjeta" href="https://www.youtube.com/" target="_blank" rel="noopener">
+        <div class="icono">▶️</div><h3>YouTube</h3><p>Vídeos, documentales y contenido educativo.</p>
+      </a>
+      <a class="tarjeta" href="https://www.wikipedia.org/" target="_blank" rel="noopener">
+        <div class="icono">📚</div><h3>Aprender</h3><p>Explora información sobre miles de temas.</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">NEXORA © 2026 · El mundo, sin límites.</footer>
+</body>
+</html>
